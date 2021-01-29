@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(45, 252, 4);
+  display: flex;
+  font-family: cursive;
+  justify-content: center;
+}
+
+.container {
+  background: rgba(31, 21, 21, 0.548);
+  margin: 50px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title span {
+  color: #e3fc01;
+}
+
+.action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.nextPlayer span {
+  color: #e3fc01;
+}
+
+.reset {
+  cursor: pointer;
+}
+.reset:hover {
+  font-size: 35px;
+  color: #fc1201;
+}
+
+.TTTboard {
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+
+.tickbox {
+  background: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+.x,
+.o {
+  cursor: default;
+}
+
+.x::after {
+  content: '×';
+  font-size: 200px;
+}
+
+.o::after {
+  content: '○';
+  color: #36fd05;
+  font-size: 225px;
+}
+
+.won::after {
+  color: #fd01c6;
+}
+
+@media only screen and (max-width: 1024px) {
+  .TTTboard {
+    margin-top: 25px;
+    grid-gap: 10px;
+  }
+
+  .tickbox {
+    height: 150px;
+    width: 150px;
+  }
+
+  .x::after {
+    font-size: 150px;
+  }
+
+  .o::after {
+    font-size: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .tickbox {
+    height: 100px;
+    width: 100px;
+  }
+
+  .x::after {
+    font-size: 100px;
+  }
+
+  .o::after {
+    font-size: 100px;
+  }
+
+}
